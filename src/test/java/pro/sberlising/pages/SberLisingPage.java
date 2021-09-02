@@ -95,7 +95,8 @@ public class SberLisingPage {
         By checkbox = By.xpath("//label[contains(text(),'" + color + "')]");
         Helper.click(driver, input);
         driver.findElement(input).sendKeys(color);
-        Helper.waitUntilVisibleAndClick(driver, checkbox, 4);
+        Helper.waitUntilClickable(driver, checkbox, 5);
+        Helper.click(driver, checkbox);
     }
 
     @Step("clickShowAllOffers")
